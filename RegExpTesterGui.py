@@ -10,7 +10,10 @@ class RegExpTestGui(QtGui.QMainWindow):
 		QtGui.QMainWindow.__init__(self, parent)
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
+		self.ui.run_button_.clicked.connect(self.loadRegExp)
 
+	def loadRegExp(self):
+		self.ui.result_text_browser_.setText("Yeah\nClicked")
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
